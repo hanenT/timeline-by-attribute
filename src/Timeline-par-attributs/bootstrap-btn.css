@@ -1,0 +1,33 @@
+.btn.btn-secondary{
+    animation:btn 5s infinite linear;
+    animation:btn-secondary 5s infinite linear;
+    position:relative;
+    background: blue;
+    color: white;
+    margin-right: -250px;
+    border-radius: 0%;
+}
+.btn.btn-secondary:hover{
+    color: blue;
+    background: white;
+    border: blue solid 1px;
+    font-size: 20px;
+}
+@keyframes btn{
+    0%{top:0em}
+    40%{top:0em}
+    43%{top:-0.9em}
+    46%{top:0em}
+    48%{top:-0.4em}
+    50%{top:0em}
+    100%{top:0em;}
+}
+@keyframes btn-secondary{
+    0%{top:0em}
+    40%{top:0em}
+    43%{top:-0.9em}
+    46%{top:0em}
+    48%{top:-0.4em}
+    50%{top:0em}
+    100%{top:0em;}
+}
