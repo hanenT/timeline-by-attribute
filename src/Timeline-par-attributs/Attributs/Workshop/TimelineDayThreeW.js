@@ -1,58 +1,58 @@
 import React, { Component } from "react";
-import "./Galerie.css"
 
-import ModalExample from "../bootstrap-btn";
+// import "./TimelineDayThree.css"
+import ModalExample from "./Bootstrap";
 
 
+const timelineListDayThree= [
+  {
+    image: "/image/RAID-image.png",
+    name: "Day W3",
+    title: "Technology and fashion design",
+    date: "26/04/2019",
+    time: "11h00/17h00",
+    place: "208",
+    description: "Hello",
+    id: 5
+  },
+  {
+    image: "/image/RAID-image.png",
+    name: "Day 3",
+    title: "Le Design pour le Digital Marketing",
+    date: "26/04/2019",
+    time: "14h00/16h00",
+    place: "102",
+    description: "Hello",
+    id: 5
+  },
+  {
+    image: "/image/RAID-image.png",
+    name: "Day 3",
+    title: "UX Masterclass.",
+    date: "26/04/2019",
+    time: "09h00/16h00",
+    place: "203",
+    description: "Hello",
+    id: 5
+  }
+]
 
-const timelineListGalerie = [
-    {
-      image: "RAID.IMAGE",
-      name: "Galerie",
-      title: "Technology and fashion design",
-      date: "24/04/2019",
-      time: "11h00/17h00",
-      place: "208",
-      description: "Hello",
-      id: 5
-    },
-    {
-      image: "RAID.IMAGE",
-      name: "Galerie",
-      title: "Le Design pour le Digital Marketing",
-      date: "24/04/2019",
-      time: "14h00/16h00",
-      place: "102",
-      description: "Hello",
-      id: 5
-    },
-    {
-      image: "RAID.IMAGE",
-      name: "Galerie",
-      title: "UX Masterclass.",
-      date: "24/04/2019",
-      time: "09h00/16h00",
-      place: "203",
-      description: "Hello",
-      id: 5
-    }
-  ]
-  
 const Dot = props => {
   return <svg className="rt-dot" viewBox="0 0 8 10">
-    <circle cx="4" cy="5" r="3" stroke='square'  color= '#ff009e'/>
+    <circle cx="4" cy="5" r="3" stroke='square'  color= '#00ff30'/>
   </svg>
 };
 
 
+
 const DefaultStartLabel = props => {
   const { date } = props.event;
-  return <div className="rt-label-ra">{date}</div>;
+  return <div className="rt-label">{date}</div>;
 };
 
 const DefaultEndLabel = props => {
   const { date } = props.event;
-  return <div className="rt-label-ra">{date}</div>;
+  return <div className="rt-label">{date}</div>;
 };
 
 const DefaultHeader = props => {
@@ -63,6 +63,7 @@ const DefaultHeader = props => {
       <h3 className="rt-title">{name}</h3>
       <p className="rt-time">{time}</p>
       <p className="rt-place">{place}</p>
+
     </div>
   );
 };
@@ -146,7 +147,7 @@ export class Timeline extends Component {
       return <li className="rt-event" >
         <div className="rt-backing">
           <ArrowAndDot />
-          <div className="rt-content-ra">
+          <div className="rt-content">
           <div className="rt-image-header-text-footer">
           <div className="rt-image-container">
               <DefaultImageBody event={event} />
@@ -180,12 +181,12 @@ export class Timeline extends Component {
     }
   }
 
-class TimelineGalerie extends Component {
+class TimelineDayThree extends Component {
   
     constructor(props) {
       super(props);
       this.state = {
-        events: timelineListGalerie,
+        events: timelineListDayThree,
       };
     }
   
@@ -202,4 +203,5 @@ class TimelineGalerie extends Component {
     }
   }
 
-  export default TimelineGalerie;
+  export default TimelineDayThree;
+    

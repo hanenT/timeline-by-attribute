@@ -1,0 +1,53 @@
+.TimelineNav-workshop-day{
+  text-align: center;
+  font-family: cursive;
+  position: relative;
+  height: 100%;
+  margin-top: 3%;
+  
+}
+.navMenu-workshop-day {
+  --webkit-transform: translateX(-50%);
+  display: flex;
+  width: 90%;
+  left: 80px;
+  position: absolute;
+  opacity: 1;
+}
+.navMenu-workshop-day > * {
+  flex: 1;
+  width: 100%;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  font: 20px cursive;
+  color: white;
+  margin: 0%;
+  padding: 0%;
+}
+
+  /* WORKSHOP */
+a.list-link-workshop-day {
+  color: white ;
+  background: #00ff30;
+  border: #00ff30 solid 2px;
+  -webkit-box-shadow: 0px  -2px  33px 0px #00ff30;
+  -moz-box-shadow: 0px  -2px  33px 0px #00ff30;
+  box-shadow: 0px -2px  33px 0px #00ff30;
+  font-family: cursive;
+  text-decoration: none;
+  }
+.list-link-workshop-day:hover{
+  text-decoration: none;
+  color: #00ff30;
+  background: white;
+  border: #00ff30 solid 2px;
+  -webkit-box-shadow: 0px  -2px  33px 0px #00ff30;
+  -moz-box-shadow: 0px  -2px  33px 0px #00ff30;
+  box-shadow: 0px -2px  33px 0px #00ff30;
+  font-family: cursive;
+}
+    
+
+  
+    
+    

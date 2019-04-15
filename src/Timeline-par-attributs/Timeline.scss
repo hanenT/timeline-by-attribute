@@ -1,22 +1,21 @@
 $max-image-height: 600px;
 $max-copy-height: 200px;
 $min-event-height: 620px;
-$dual-min-width: 600px;
-$max-width: 1600px;
-$arrow-width: 5%;
+$dual-min-width: 320px;
+$max-width: 100%;
+$min-width:0%;
 $event-width: 45%;
 $label-radius: 3em;
 $padding: 0.5em;
 $radius: 0.35em;
 $dot-radius: 5%;
-$arrow-offset: 20px;
 $fade-height: 80px;
-$text-color: #313740;
-$label-color: lighten(#2d384b, 15%);
-$event-color: #f0f0f0;
-$button-color: #5592cb;
-$header-color: lighten(#2d384b, 30%);
-$transparent-white: rgba(255, 255, 255, 0);
+$text-color: black;
+// $label-color: lighten(#2d384b, 15%);
+// $event-color: #f0f0f0;
+// $button-color: #5592cb;
+// $header-color: lighten(#2d384b, 30%);
+// $transparent-white: rgba(255, 255, 255, 0);
 
 *,
 *:after,
@@ -36,12 +35,10 @@ p {
   padding: 0;
 }
 
-h2 {
-  font-size: 1.75em;
-}
+
 
 .rt-timeline-container {
-  padding: 1em;
+  padding: 0%;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -77,7 +74,7 @@ h2 {
   align-items: center;
   color: white;
   border-radius: 50%;
-  background: $label-color;
+  background: auto;
   font-size: 2em;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
   width: $label-radius;
@@ -90,7 +87,7 @@ h2 {
 
 .rt-backing {
   border-radius: 0%;
-  background: $event-color;
+  background: auto;
   color: $text-color;
 
 }
@@ -120,11 +117,11 @@ h2 {
 
   .rt-dot {
     position: absolute;
-    margin-top: $arrow-offset;
+    margin-top: 0%;
     left: -(11% + ($dot-radius * 0.5));
     right: auto;
     fill: currentcolor;
-    color: $header-color;
+    color: auto;
     width: $dot-radius;
     z-index: 100;
   }
@@ -134,17 +131,6 @@ h2 {
 
     svg {
       transform: scale(-1, 1);
-    }
-
-    .rt-arrow {
-      z-index: 100;
-      position: absolute;
-      margin-top: $arrow-offset;
-      left: -($arrow-width);
-      right: auto;
-      fill: currentcolor;
-      width: $arrow-width + 0.25%;
-      color: $header-color;
     }
   }
 
@@ -156,12 +142,6 @@ h2 {
     svg {
       transform: scale(1, 1);
     }
-
-    .rt-arrow {
-      left: auto;
-      right: -$arrow-width;
-    }
-
     .rt-dot {
       left: auto;
       right: -(11% + ($dot-radius * 0.5));
@@ -188,11 +168,11 @@ li:nth-child(3) {
 }
 
 .rt-header-container {
-  color: white;
-  padding: $padding * 0.5;
-  background-color: $header-color;
-  border-radius: $radius $radius 0 0;
-  overflow: hidden;
+  color: auto;
+  padding: 0%;
+  background-color: auto;
+  // border-radius: none;
+  // overflow: hidden;
 }
 
 .rt-image-container {
@@ -245,31 +225,33 @@ li:nth-child(3) {
   content: "";
   position: relative;
   text-align: left;
+ 
 }
 
-.rt-text-container:before {
-  content: "";
-  font-weight: lighter;
-  width: 100%;
-  height: $fade-height;
-  position: absolute;
-  left: 0;
-  top: $max-copy-height - $fade-height;
-  background: transparent;
-  background: -webkit-linear-gradient(
-    $transparent-white,
-    $event-color
-  ); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(
-    $transparent-white,
-    $event-color
-  ); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(
-    $transparent-white,
-    $event-color
-  ); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(
-    $transparent-white,
-    $event-color
-  ); /* Standard syntax */
-}
+// .rt-text-container:before {
+  // content: "";
+  // font-weight: lighter;
+  // width: 100%;
+  // height: $fade-height;
+  // position: absolute;
+  // left: 0;
+  // top: $max-copy-height - $fade-height;
+  // background: transparent;
+  // border: solid black;
+  // background: -webkit-linear-gradient(
+  //   $transparent-white,
+  //   $event-color
+  // ); /* For Safari 5.1 to 6.0 */
+  // background: -o-linear-gradient(
+  //   $transparent-white,
+  //   $event-color
+  // ); /* For Opera 11.1 to 12.0 */
+  // background: -moz-linear-gradient(
+  //   $transparent-white,
+  //   $event-color
+  // ); /* For Firefox 3.6 to 15 */
+  // background: linear-gradient(
+  //   $transparent-white,
+  //   $event-color
+  // ); /* Standard syntax */
+// }

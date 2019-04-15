@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-import "./Conferences.css"
+import "./ProgrammeCompletW.css";
 
-import ModalExample from "../bootstrap-btn";
+import ModalExample from "./Bootstrap";
+import img from '../../../../src/mouna.jpg'
 
 
-
-const timelineListConferences = [
+const timelineListWorkshop = [
     {
-      image: "RAID.IMAGE",
-      name: "Conferences",
+      img,
+      name: "Workshop1",
       title: "Technology and fashion design",
       date: "24/04/2019",
       time: "11h00/17h00",
@@ -17,8 +17,8 @@ const timelineListConferences = [
       id: 5
     },
     {
-      image: "RAID.IMAGE",
-      name: "Conferences",
+      img,
+      name: "Workshop2",
       title: "Le Design pour le Digital Marketing",
       date: "24/04/2019",
       time: "14h00/16h00",
@@ -27,20 +27,50 @@ const timelineListConferences = [
       id: 5
     },
     {
-      image: "RAID.IMAGE",
-      name: "Conferences",
+      img,
+      name: "Workshop3",
       title: "UX Masterclass.",
       date: "24/04/2019",
       time: "09h00/16h00",
       place: "203",
       description: "Hello",
       id: 5
-    }
+    },
+    {
+      img,
+      name: "Workshop4",
+      title: "Technology and fashion design",
+      date: "24/04/2019",
+      time: "11h00/17h00",
+      place: "208",
+      description: "Hello",
+      id: 5
+    },
+    {
+      img,
+      name: "Workshop5",
+      title: "Technology and fashion design",
+      date: "24/04/2019",
+      time: "11h00/17h00",
+      place: "208",
+      description: "Hello",
+      id: 5
+    },
+    {
+      img,
+      name: "Workshop6",
+      title: "Technology and fashion design",
+      date: "24/04/2019",
+      time: "11h00/17h00",
+      place: "208",
+      description: "Hello",
+      id: 5
+    },
   ]
   
 const Dot = props => {
   return <svg className="rt-dot" viewBox="0 0 8 10">
-    <circle cx="4" cy="5" r="3" stroke='square'  color= 'blue'/>
+    <circle cx="4" cy="5" r="3" stroke='square'  color= '#00ff30'/>
   </svg>
 };
 
@@ -86,10 +116,10 @@ const DefaultTextBody = props => {
 };
 
 const DefaultImageBody = props => {
-  const { image } = props.event;
+  const { img } = props.event;
   return (
     <div>
-      <img src={image} alt="" className="rt-image" />
+      <img src={img} alt="" className="rt-image" />
     </div>
   );
 };
@@ -180,12 +210,12 @@ export class Timeline extends Component {
     }
   }
 
-class TimelineConferences extends Component {
+class TimelineWorkshop extends Component {
   
     constructor(props) {
       super(props);
       this.state = {
-        events: timelineListConferences,
+        events: timelineListWorkshop,
       };
     }
   
@@ -202,4 +232,4 @@ class TimelineConferences extends Component {
     }
   }
 
-  export default TimelineConferences;
+  export default TimelineWorkshop;

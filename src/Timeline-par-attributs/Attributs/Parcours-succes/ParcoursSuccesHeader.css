@@ -1,0 +1,53 @@
+.TimelineNav-Parcours-Succes-day{
+    text-align: center;
+    font-family: cursive;
+    position: relative;
+    height: 100%;
+    margin-top: 3%;
+    
+  }
+  .navMenu-Parcours-Succes-day {
+    --webkit-transform: translateX(-50%);
+    display: flex;
+    width: 90%;
+    left: 80px;
+    position: absolute;
+    opacity: 1;
+  }
+  .navMenu-Parcours-Succes-day > * {
+    flex: 1;
+    width: 100%;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    font: 20px cursive;
+    color: white;
+    margin: 0%;
+    padding: 0%;
+  }
+  
+    /* WORKSHOP */
+  a.list-link-Parcours-Succes-day {
+    color: white ;
+    background: #ceff00;
+    border: #ceff00 solid 2px;
+    -webkit-box-shadow: 0px  -2px  33px 0px #ceff00;
+    -moz-box-shadow: 0px  -2px  33px 0px #ceff00;
+    box-shadow: 0px -2px  33px 0px #ceff00;
+    font-family: cursive;
+    text-decoration: none;
+    }
+  .list-link-ParcoursSucces-day:hover{
+    text-decoration: none;
+    color: #ceff00;
+    background: white;
+    border: #ceff00 solid 2px;
+    -webkit-box-shadow: 0px  -2px  33px 0px #ceff00;
+    -moz-box-shadow: 0px  -2px  33px 0px #ceff00;
+    box-shadow: 0px -2px  33px 0px #ceff00;
+    font-family: cursive;
+  }
+      
+  
+    
+      
+      

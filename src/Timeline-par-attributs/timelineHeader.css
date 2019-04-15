@@ -1,65 +1,121 @@
-.list-link {
-    animation: list-link 5s infinite linear;
-    position:relative;
-    color: blue;
-    flex-direction: space-around;
-    background: white;
-    /* width: 300px; */
-    font-family: cursive;
-  }
+.TimelineNav {
+  text-align: center;
+  font-family: cursive;
+  position: relative;
+  height: 100%;
   
-  @keyframes list-link{
-      0%{top:0em}
-      40%{top:0em}
-      43%{top:-0.9em}
-      46%{top:0em}
-      48%{top:-0.4em}
-      50%{top:0em}
-      100%{top:0em;}
-      }
-  .list-link-Colloque-scientifique{
-    animation: list-link-Colloque-scientifique 6s infinite linear;
-    position:relative;
-    color: blue;
-    flex-direction: space-around;
-    background: white;
-    /* width: 300px; */
-    font-family: cursive;
-      }
-  .list-link-workshop{
-    animation: list-link-workshop 7s infinite linear;
-    position:relative;
-    color: blue;
-    flex-direction: space-around;
-    background: white;
-    /* width: 300px; */
-    font-family: cursive;
-      } 
-  .list-link-Think-Tank{
-    animation: list-link-Think-Tank 8s infinite linear;
-    position:relative;
-    color: blue;
-    flex-direction: space-around;
-    background: white;
-    /* width: 300px; */
-    font-family: cursive;
-      } 
-  .list-link-Think-Tank:hover{
-    color: #ffc200;
-    background: white;
-    border: #ffc200 solid 2px;
-    -webkit-box-shadow: 0px  -2px  33px 0px #ffc200;
-    -moz-box-shadow: 0px  -2px  33px 0px #ffc200;
-    box-shadow: 0px -2px  33px 0px #ffc200;
-    font-family: cursive;
-      }
+}
+.navMenu {
+  --webkit-transform: translateX(-50%);
+  display: flex;
+  width: 90%;
+  left: 80px;
+  position: absolute;
+  opacity: 1;
+}
+.navMenu > * {
+  flex: 1;
+  width: 100%;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  font: 20px cursive;
+  color: white;
+  margin: 0%;
+  padding: 0%;
+}
+/* Colloque-scientifique */
+a.list-link-Colloque-scientifique{
+  animation: list-link-Colloque-scientifique 5s infinite linear;
+  position:relative;
+  color: white;
+  flex-direction: space-around;
+  background: blue;
+  font-family: cursive;
+  }
+  @keyframes list-link-Colloque-scientifique{
+    0%{top:0em}
+    40%{top:0em}
+    43%{top:-0.9em}
+    46%{top:0em}
+    48%{top:-0.4em}
+    50%{top:0em}
+    100%{top:0em;}
+    } 
+.list-link-Colloque-scientifique:hover{
+  position:relative;
+  color: blue;
+  flex-direction: space-around;
+  background: white;
+  font-family: cursive;
+  text-decoration: none;
+  -webkit-box-shadow: 0px  -2px  33px 0px blue;
+  -moz-box-shadow: 0px  -2px  33px 0px blue;
+  box-shadow: 0px -2px  33px 0px blue;
+  }
+  /* WORKSHOP */
+a.list-link-workshop{
+  animation: list-link-workshop-header 6s infinite linear;
+  position:relative;
+  color: white;
+  flex-direction: space-around;
+  background: blue;
+  font-family: cursive;
+  } 
+@keyframes list-link-workshop {
+  0%{top:0em}
+  40%{top:0em}
+  43%{top:-0.9em}
+  46%{top:0em}
+  48%{top:-0.4em}
+  50%{top:0em}
+  100%{top:0em;}
+  }
+.list-link-workshop:hover {
+  color: #00ff30;
+  background: white;
+  border: #00ff30 solid 2px;
+  -webkit-box-shadow: 0px  -2px  33px 0px #00ff30;
+  -moz-box-shadow: 0px  -2px  33px 0px #00ff30;
+  box-shadow: 0px -2px  33px 0px #00ff30;
+  font-family: cursive;
+  text-decoration: none;
+  }
+/*THINK-TANK*/
+.list-link-Think-Tank{
+  animation: list-link-Think-Tank 8s infinite linear;
+  position:relative;
+  background: blue;
+  flex-direction: space-around;
+  color: white;
+  font-family: cursive;
+  } 
+.list-link-Think-Tank:hover{
+  color: #ffc200;
+  background: white;
+  border: #ffc200 solid 2px;
+  -webkit-box-shadow: 0px  -2px  33px 0px #ffc200;
+  -moz-box-shadow: 0px  -2px  33px 0px #ffc200;
+  box-shadow: 0px -2px  33px 0px #ffc200;
+  font-family: cursive;
+  text-decoration: none;
+  }
+@keyframes list-link-Think-Tank {
+  0%{top:0em}
+  40%{top:0em}
+  43%{top:-0.9em}
+  46%{top:0em}
+  48%{top:-0.4em}
+  50%{top:0em}
+  100%{top:0em;}
+  }
+
+  /*PARCOURS-SUCCES*/
   .list-link-Parcours-succes{
     animation: list-link-Parcours-succes 9s infinite linear;
     position:relative;
-    color: blue;
+    background-color: blue;
     flex-direction: space-around;
-    background: white;
-    /* width: 300px; */
+    background: blue;
     font-family: cursive;
       } 
   .list-link-Parcours-succes:hover{
@@ -70,14 +126,25 @@
     -moz-box-shadow: 0px  -2px  33px 0px #ceff00;
     box-shadow: 0px -2px  33px 0px #ceff00;
     font-family: cursive;
+    text-decoration: none;
     }
+    @keyframes  list-link-Parcours-succes {
+      0%{top:0em}
+    40%{top:0em}
+    43%{top:-0.9em}
+    46%{top:0em}
+    48%{top:-0.4em}
+    50%{top:0em}
+    100%{top:0em;}
+    }
+  
+    /*RAID-ART*/
   .list-link-Raid-Art{
     animation: list-link-Raid-Art 10s infinite linear;
     position:relative;
-    color: blue;
+    color: white;
     flex-direction: space-around;
-    background: white;
-    /* width: 300px; */
+    background: blue;
     font-family: cursive;
       } 
   .list-link-Raid-Art:hover{
@@ -88,89 +155,36 @@
     -moz-box-shadow: 0px  -2px  33px 0px #ff009e;
     box-shadow: 0px -2px  33px 0px #ff009e;
     font-family: cursive;
+    text-decoration: none;
     }
-  /* .list-link-Raid-Art:active{
-    color: #ff009e;
-    background: white;
-    border: #ff009e solid 2px;
-    -webkit-box-shadow: 0px  -2px  33px 0px #ff009e;
-    -moz-box-shadow: 0px  -2px  33px 0px #ff009e;
-    box-shadow: 0px -2px  33px 0px #ff009e;
-    font-family: cursive;
-  } */
-
+    @keyframes list-link-Raid-Art {
+      0%{top:0em}
+    40%{top:0em}
+    43%{top:-0.9em}
+    46%{top:0em}
+    48%{top:-0.4em}
+    50%{top:0em}
+    100%{top:0em;}
+    }
+    /*Galerie*/
   .list-link-Galerie {
     animation: list-link-Galerie 11s infinite linear;
     position:relative;
-    color: blue;
+    color: white;
     flex-direction: space-around;
-    background: white;
-    /* width: 300px; */
+    background: blue;
     font-family: cursive;
       }
-      .list-link-Connection{
-        animation: list-link-Connection 12s infinite linear;
-    position:relative;
-    color: blue;
-    flex-direction: space-around;
-    background: white;
-    /* width: 300px; */
+.list-link-Galerie:hover {
+  color: blue;
+  background: white;
+    border: blue solid 2px;
+    -webkit-box-shadow: 0px  -2px  33px 0px blue;
+    -moz-box-shadow: 0px  -2px  33px 0px blue;
+    box-shadow: 0px -2px  33px 0px blue;
     font-family: cursive;
-      }
-      @keyframes list-link-Colloque-scientifique{
-        0%{top:0em}
-        40%{top:0em}
-        43%{top:-0.9em}
-        46%{top:0em}
-        48%{top:-0.4em}
-        50%{top:0em}
-        100%{top:0em;}
-      } 
-      @keyframes list-link-workshop {
-        0%{top:0em}
-      40%{top:0em}
-      43%{top:-0.9em}
-      46%{top:0em}
-      48%{top:-0.4em}
-      50%{top:0em}
-      100%{top:0em;}
-      }
-      @keyframes list-link-Think-Tank {
-        0%{top:0em}
-      40%{top:0em}
-      43%{top:-0.9em}
-      46%{top:0em}
-      48%{top:-0.4em}
-      50%{top:0em}
-      100%{top:0em;}
-      }
-      @keyframes  list-link-Parcours-succes {
-        0%{top:0em}
-      40%{top:0em}
-      43%{top:-0.9em}
-      46%{top:0em}
-      48%{top:-0.4em}
-      50%{top:0em}
-      100%{top:0em;}
-      }
-      @keyframes  list-link-Parcours-succes {
-        0%{top:0em}
-      40%{top:0em}
-      43%{top:-0.9em}
-      46%{top:0em}
-      48%{top:-0.4em}
-      50%{top:0em}
-      100%{top:0em;}
-      }
-      @keyframes list-link-Raid-Art {
-        0%{top:0em}
-      40%{top:0em}
-      43%{top:-0.9em}
-      46%{top:0em}
-      48%{top:-0.4em}
-      50%{top:0em}
-      100%{top:0em;}
-      }
+    text-decoration: none;
+    }
       @keyframes list-link-Galerie {
         0%{top:0em}
       40%{top:0em}
@@ -180,124 +194,7 @@
       50%{top:0em}
       100%{top:0em;}
       }
-      @keyframes list-link-Connection {
-        0%{top:0em}
-      40%{top:0em}
-      43%{top:-0.9em}
-      46%{top:0em}
-      48%{top:-0.4em}
-      50%{top:0em}
-      100%{top:0em;}
-      }
-  /* @import 'https://fonts.googleapis.com/css?family=Lato:100, 300, 400, 700, 900'; */
-  
 
-  .TimelineNav {
-      text-align: center;
-      font-family: cursive;
-      position: relative;
-      height: 100px;
-    }
-    
-   
-      .navMenu {
-        /* position: absolute; */
-        --webkit-transform: translateX(-50%);
-        /* transform: translateX(-50%); */
-        /* display: -webkit-flex; */
-        display: flex;
-        /* -webkit-flex-direction: row; */
-        /* flex-direction: row; */
-        width: 90%;
-        left: 80px;
-        position: absolute;
-        opacity: 1;
-        
-    }
-    
-    .navMenu > * {
-      flex: 1;
-      width: 100%;
-      text-decoration: none;
-      transition: all 0.4s ease;
-      font: 20px cursive;
-      color: white;
-      margin: 1em;
-      padding: 1em;
-      background-color: blue;
-    }
-    
-    a:hover {
-      color: blue;
-      background: white;
-      border: blue solid 2px;
-      -webkit-box-shadow: 0px  -2px  33px 0px rgba(0,0,255,0.71);
-      -moz-box-shadow: 0px  -2px  33px 0px rgba(0,0,255,0.71);
-      box-shadow: 0px -2px  33px 0px rgba(0,0,255,0.71);
-      font-family: cursive;
-    }
-    .list-link-workshop:hover {
-      color: #00ff30;
-      background: white;
-      border: #00ff30 solid 2px;
-      -webkit-box-shadow: 0px  -2px  33px 0px #00ff30;
-      -moz-box-shadow: 0px  -2px  33px 0px #00ff30;
-      box-shadow: 0px -2px  33px 0px #00ff30;
-      font-family: cursive;
-    }
-    .list-link-workshop:active {
-      color: #00ff30;
-      background: white;
-      border: #00ff30 solid 2px;
-      -webkit-box-shadow: 0px  -2px  33px 0px #00ff30;
-      -moz-box-shadow: 0px  -2px  33px 0px #00ff30;
-      box-shadow: 0px -2px  33px 0px #00ff30;
-      font-family: cursive;
-    }
-    a:active {
-      color: blue;
-      background: white;
-      border: blue solid 2px;
-      -webkit-box-shadow: 0px  -2px  33px 0px rgba(0,0,255,0.71);
-      -moz-box-shadow: 0px  -2px  33px 0px rgba(0,0,255,0.71);
-      box-shadow: 0px -2px  33px 0px rgba(0,0,255,0.71);
-      font-family: cursive;
-      
-      
-    }
-    
-    .displayResult {
-      left: 100%;
-      opacity: .1;
-      transition: all 0.5s ease;
-    }
-    
-    .displayResult.fade {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 25%;
-      opacity: 1;
-    }
-    
-    /* .displayResult > div {
-      background-color: #2CCF6A;
-      margin: .5em;
-      padding: .5em;
-    } */
-    
-    .navMenu.fade {
-      opacity: 0.01;
-      left: -50%;
-      transition: all 1s ease;
-    }
-    
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: cursive;
-      background-color: azure;
-    }
-    
+  
     
     

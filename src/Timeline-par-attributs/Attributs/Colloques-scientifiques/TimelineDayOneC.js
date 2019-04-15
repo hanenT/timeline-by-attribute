@@ -1,14 +1,13 @@
 import React, { Component } from "react";
-import "./Parcours-succes.css"
-
-import ModalExample from "../bootstrap-btn";
-
+// import "./TimelineDayOne.css"
+import ModalExample from "./Boostrap";
 
 
-const timelineListParcoursSucces = [
+
+const timelineListDayOne = [
     {
-      image: "RAID.IMAGE",
-      name: "ParcoursSucces",
+      image: "/image/RAID-image.png",
+      name: "Day 1",
       title: "Technology and fashion design",
       date: "24/04/2019",
       time: "11h00/17h00",
@@ -17,8 +16,8 @@ const timelineListParcoursSucces = [
       id: 5
     },
     {
-      image: "RAID.IMAGE",
-      name: "ParcoursSucces",
+      image: "/image/RAID-image.png",
+      name: "Day 1",
       title: "Le Design pour le Digital Marketing",
       date: "24/04/2019",
       time: "14h00/16h00",
@@ -27,8 +26,8 @@ const timelineListParcoursSucces = [
       id: 5
     },
     {
-      image: "RAID.IMAGE",
-      name: "ParcoursSucces",
+      image: "/image/RAID-image.png",
+      name: "Day 1a",
       title: "UX Masterclass.",
       date: "24/04/2019",
       time: "09h00/16h00",
@@ -40,19 +39,19 @@ const timelineListParcoursSucces = [
   
 const Dot = props => {
   return <svg className="rt-dot" viewBox="0 0 8 10">
-    <circle cx="4" cy="5" r="3" stroke='square'  color= '#ceff00'/>
+    <circle cx="4" cy="5" r="3" stroke='square'  color= 'blue'/>
   </svg>
 };
 
 
 const DefaultStartLabel = props => {
   const { date } = props.event;
-  return <div className="rt-label-ps">{date}</div>;
+  return <div className="rt-label">{date}</div>;
 };
 
 const DefaultEndLabel = props => {
   const { date } = props.event;
-  return <div className="rt-label-ps">{date}</div>;
+  return <div className="rt-label">{date}</div>;
 };
 
 const DefaultHeader = props => {
@@ -146,8 +145,8 @@ export class Timeline extends Component {
       return <li className="rt-event" >
         <div className="rt-backing">
           <ArrowAndDot />
-          <div className="rt-content-ps">
-          <div className="rt-image-header-text-footer-ps">
+          <div className="rt-content">
+          <div className="rt-image-header-text-footer">
           <div className="rt-image-container">
               <DefaultImageBody event={event} />
             </div>
@@ -180,12 +179,12 @@ export class Timeline extends Component {
     }
   }
 
-class TimelineParcoursSucces extends Component {
+class TimelineDayOneColloques extends Component {
   
     constructor(props) {
       super(props);
       this.state = {
-        events: timelineListParcoursSucces,
+        events: timelineListDayOne,
       };
     }
   
@@ -202,4 +201,4 @@ class TimelineParcoursSucces extends Component {
     }
   }
 
-  export default TimelineParcoursSucces;
+  export default TimelineDayOneColloques;

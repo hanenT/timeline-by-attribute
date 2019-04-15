@@ -1,14 +1,48 @@
 import React, { Component } from "react";
-// import "./App.css";
-import timelineList from "./Data";
-import "./Timeline.css"
-import ModalExample from "./bootstrap-btn";
+// import "./TimelineDayOne.css"
+import ModalExample from "./Bootstrap";
 
+
+
+const timelineListDayTwo = [
+    {
+      image: "/image/RAID-image.png",
+      name: "Day 2 Galerie",
+      title: "Technology and fashion design",
+      date: "24/04/2019",
+      time: "11h00/17h00",
+      place: "208",
+      description: "Hello",
+      id: 5
+    },
+    {
+      image: "/image/RAID-image.png",
+      name: "Day 2 Galerie",
+      title: "Le Design pour le Digital Marketing",
+      date: "24/04/2019",
+      time: "14h00/16h00",
+      place: "102",
+      description: "Hello",
+      id: 5
+    },
+    {
+      image: "/image/RAID-image.png",
+      name: "Day 2 Galerie",
+      title: "UX Masterclass.",
+      date: "24/04/2019",
+      time: "09h00/16h00",
+      place: "203",
+      description: "Hello",
+      id: 5
+    }
+  ]
+  
 const Dot = props => {
   return <svg className="rt-dot" viewBox="0 0 8 10">
     <circle cx="4" cy="5" r="3" stroke='square'  color= 'blue'/>
   </svg>
 };
+
 
 const DefaultStartLabel = props => {
   const { date } = props.event;
@@ -28,7 +62,6 @@ const DefaultHeader = props => {
       <h3 className="rt-title">{name}</h3>
       <p className="rt-time">{time}</p>
       <p className="rt-place">{place}</p>
-
     </div>
   );
 };
@@ -146,15 +179,16 @@ export class Timeline extends Component {
     }
   }
 
-class TimelineHoleEvent extends Component {
+class TimelineDayTwoGalerie extends Component {
   
     constructor(props) {
       super(props);
       this.state = {
-        events: timelineList,
+        events: timelineListDayTwo,
       };
     }
   
+
     render() {
       const { events} = this.state;
       const timeline = <Timeline events={events} />;
@@ -167,4 +201,4 @@ class TimelineHoleEvent extends Component {
     }
   }
 
-  export default TimelineHoleEvent;
+  export default TimelineDayTwoGalerie;
